@@ -1,6 +1,10 @@
 from django.conf.urls import url
 from . import views
 
+
 urlpatterns = [
-    url(r'^$', views.post_list, name='post_list'),
+    url(r'^$', views.Postlist.as_view()),
+    url(r'^about/$', views.Aboutme.as_view()),
+    url(r'^blog/$', views.MyBlog.as_view()),
 ]
+
